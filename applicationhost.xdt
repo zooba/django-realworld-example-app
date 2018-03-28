@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<configuration  xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer>
+    <fastCgi>
+      <application fullPath="D:\home\site\wwwroot\python\tools\python.exe"
+                   arguments="-m wfastcgi"
+                   activityTimeout="70"
+                   idleTimeout="3600"
+                   signalBeforeTerminateSeconds="30">
+        <environmentVariables>
+          <environmentVariable name="PYTHONHOME" value="D:\home\site\wwwroot\python\tools" />
+          <environmentVariable name="PYTHONIOENCODING" value="utf-8:replace" />
+          <environmentVariable name="PYTHONPATH" value="D:\home\site\wwwroot" />
+          <environmentVariable name="SSL_CERT_FILE" value="D:\home\site\wwwroot\python\tools\lib\site-packages\certifi\cacert.pem" />
+        </environmentVariables>
+      </application>
+    </fastCgi>
+  </system.webServer>
+</configuration>
