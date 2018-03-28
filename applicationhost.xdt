@@ -6,7 +6,9 @@
                    arguments="-m wfastcgi"
                    activityTimeout="70"
                    idleTimeout="3600"
-                   signalBeforeTerminateSeconds="30">
+                   signalBeforeTerminateSeconds="30"
+                   xdt:Transform="InsertIfMissing"
+                   xdt:Locator="Match(fullPath)">
         <environmentVariables>
           <environmentVariable name="PYTHONHOME" value="D:\home\site\wwwroot\python\tools" />
           <environmentVariable name="PYTHONIOENCODING" value="utf-8:replace" />
